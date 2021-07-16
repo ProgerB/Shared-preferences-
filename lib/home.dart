@@ -22,15 +22,12 @@ class _MyAppState extends State<MyApp> {
     textage = _controllerAge.text;
     SharedPreferences pref = await SharedPreferences.getInstance();
     log(textname + ' - ' + textage);
-    // result[0] = pref.setString('name', textname).toString();
-    // result[1] = pref.setString('age', textage).toString();
+
     pref.setString('name', textname).toString();
     pref.setString('age', textage).toString();
-    // resultName;
   }
 
   Future showText() async {
-    // textname = _controllerName.text;
     SharedPreferences pref = await SharedPreferences.getInstance();
     log(pref.getString("name").toString());
     log(pref.getString("age").toString());
